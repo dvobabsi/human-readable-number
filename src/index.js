@@ -16,6 +16,6 @@ module.exports = function toReadable (number) {
             return twenty[+num[0]] + twenty[1] + zero[+num[1]];
         }
     case 3: //100-999
-        return zero[+num[0]] + twenty[1] + point[0] + twenty[+num[2]] + twenty[1] + zero[+num[3]];
+        return zero[+num[0]] + twenty[1] + point[0] + twenty[1] + twenty[+num[2]] + twenty[1] + zero[+num[3]];
   }
 }
