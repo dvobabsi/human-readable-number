@@ -1,10 +1,11 @@
 module.exports = function toReadable (number) {
-  const zero = ['zero','one','two','three','four','five','six','seven','eight','nine'];
+    const z = ['zero']
+  const zero = ['','one','two','three','four','five','six','seven','eight','nine'];
   const ten = ['ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen'];
   const twenty = ['', ' ','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety'];
   const point = ['hundred','thousand']
 
-  let num = number.toString();
+  let num = number.toString().split('');
 
   switch(num.length) {
     case 1: //0-9
@@ -16,6 +17,6 @@ module.exports = function toReadable (number) {
             return twenty[+num[0]] + twenty[1] + zero[+num[1]];
         }
     case 3: //100-999
-        return zero[+num[0]] + twenty[1] + point[0] + twenty[1] + twenty[+num[2]] + twenty[1] + zero[+num[3]];
+        return zero[+num[0]] + twenty[1] + point[0] + twenty[1] + twenty[+num[1]] + twenty[1] + zero[+num[2]];
   }
 }
