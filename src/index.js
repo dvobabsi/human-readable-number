@@ -13,7 +13,7 @@ module.exports = function toReadable (number) {
         if(number < 20) {
             return ten[number - 10];
         } else {
-            return twenty[number[0]] + twenty[1] + zero[number[1]];
+            return twenty[+num[0]] + twenty[1] + zero[+num[1]];
         }
     case 3: //100-999
         return `nine hundred nineteen nine`;
